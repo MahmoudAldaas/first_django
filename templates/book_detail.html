@@ -1,0 +1,19 @@
+<!-- templates/book_detail.html — Shows a single book's details -->
+{% extends 'main.html' %}
+
+{% block title %}{{ book.title }} — Library{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h1>{{ book.title }}</h1>
+        <hr>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Year:</strong> {{ book.year }}</p>
+        <p><strong>Description:</strong> {{ book.description }}</p>
+        <a href="{% url 'books' %}" class="btn btn-secondary mt-3">
+            &larr; Back to All Books
+        </a>
+    </div>
+</div>
+{% endblock %}

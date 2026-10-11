@@ -1,0 +1,14 @@
+<!-- templates/home.html — Home page -->
+{% extends 'main.html' %}
+
+{% block title %}Home — Library{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1>Welcome to the Library</h1>
+    <p class="lead">Browse our collection of <strong>{{ total_books }}</strong> books.</p>
+    <a href="{% url 'books' %}" class="btn btn-primary btn-lg mt-3">
+        View All Books
+    </a>
+</div>
+{% endblock %}

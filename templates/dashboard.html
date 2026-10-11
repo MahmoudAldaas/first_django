@@ -1,0 +1,43 @@
+<!-- templates/dashboard.html — Library statistics -->
+{% extends 'main.html' %}
+
+{% block title %}Dashboard — Library{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Library Dashboard</h1>
+
+<div class="row">
+    <div class="col-md-3 mb-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h2 class="text-primary">{{ total_books }}</h2>
+                <p class="card-text">Total Books</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h2 class="text-success">{{ total_authors }}</h2>
+                <p class="card-text">Authors</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h2 class="text-info">{{ newest_book.year }}</h2>
+                <p class="card-text">Newest: {{ newest_book.title }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h2 class="text-warning">{{ oldest_book.year }}</h2>
+                <p class="card-text">Oldest: {{ oldest_book.title }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
